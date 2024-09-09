@@ -1,0 +1,198 @@
+
+
+.a{
+
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0; /* Ensure no default margins */
+    padding: 0; /* Remove default padding */
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8); /* Initial background color */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    z-index: 1000; /* Ensure the navbar is above other content */
+    position: fixed; /* Keep the navbar fixed at the top */
+    top: 0; /* Ensure it stays at the top */
+    width: 100%; /* Full width */
+    padding: 10px 0; /* Padding for vertical space */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* Background color when scrolled */
+    opacity: 0.9; /* Reduced opacity */
+}
+
+
+.navbar-nav .nav-link {
+    color: white; /* Ensures link color */
+    background-color: rgba(0, 0, 0, 0.8); /* Consistent background for links */
+    padding: 10px; /* Padding around links */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    background-color: rgba(255, 255, 255, 0.2); /* Background color on hover/focus */
+}
+/* Add margin-top to content to account for navbar height */
+.content {
+    margin-top: 80px; /* Adjust this value according to the height of your navbar */
+}
+
+/* Add some top padding to ensure content does not overlap with the fixed navbar */
+body {
+    padding-top: 80px; /* Adjust this value according to the height of your navbar */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(231, 219, 219, 0.1);
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+.hero {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 60px;
+}
+.hero img {
+max-width: 50%;
+border-radius: 8px;
+}
+.hero-text {
+max-width: 50%;
+animation: fadeIn 3s ease-in-out;
+}
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+section {
+padding: 60px 15px;
+background-color: #1a1a1a;
+border-radius: 8px;
+margin-bottom: 30px;
+}
+.section-title {
+text-align: center;
+margin-bottom: 30px;
+font-size: 2rem;
+color: #fff;
+}
+.contact {
+    padding: 60px 15px;
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.contact .section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.contact-form, .contact-info {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form .form-control {
+    border-radius: 4px;
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #666;
+}
+
+.contact-form .form-control:focus {
+    border-color: #999;
+    background-color: #555;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.contact-info a.contact-link {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+.contact-info a.contact-link:hover {
+    text-decoration: underline;
+}
+.nav-link {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Ensures link color inherits from parent element, preserving consistency */
+}
+
+
+
+.nav-icon-container svg {
+    width: 24px; /* Adjust size as needed */
+    height: 24px; /* Adjust size as needed */
+    color: #fff; /* Adjust color as needed */
+}
+
+.nav-icon-container h5 {
+    margin: 0;
+    color: #f4eaea; /* Adjust color as needed */
+    font-size: 1rem; /* Adjust font size as needed */
+}
+
+.btn-light {
+    background-color: #676565;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-light:hover {
+    background-color: #575757;
+}
+
+/* Ensure columns stay side by side on medium and larger screens */
+@media (min-width: 768px) {
+    .contact-form, .contact-info {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px; /* Space between columns on medium screens and larger */
+    }
+}
+
+/* Ensure columns stay side by side on medium and larger screens */
+@media (min-width: 768px) {
+    .contact-form, .contact-info {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px; /* Space between columns on medium screens and larger */
+    }
+}
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+
+       
+
+
+
+  

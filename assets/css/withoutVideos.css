@@ -1,0 +1,110 @@
+/* Ensure the HTML and Body take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.a{
+
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+/* Body as a flex container */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content area */
+.content {
+    flex: 1; /* Allow the content area to expand and take up available space */
+    margin-top: 80px; /* Adjust this value according to the height of your navbar */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(231, 219, 219, 0.1);
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+/* Other styles */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0.9;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.portfolio-section {
+    padding: 60px 15px;
+    background-color: #1a1a1a;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.video-item {
+    margin-bottom: 20px;
+}
+
+.video-item video {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.view-more {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-light {
+    background-color: #676565;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-light:hover {
+    background-color: #575757;
+}

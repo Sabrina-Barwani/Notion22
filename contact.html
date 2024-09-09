@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+    <link rel="stylesheet" href="./assets/css/contact.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./assets/imgs/Image__16_-removebg-preview.png" alt="Brand Logo" style="height: 50px; margin-left: -1rem;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <!-- Portfolio Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="portfolioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Portfolio
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="portfolioDropdown">
+                            <li><a class="dropdown-item" href="./commercial.html">Commercial</a></li>
+                            <li><a class="dropdown-item" href="./events.html">Events</a></li>
+                            <li><a class="dropdown-item" href="./interviews.html">Interviews</a></li>
+                            <li><a class="dropdown-item" href="./lifestle.html">Lifestle</a></li>
+                            <li><a class="dropdown-item" href="./player.html">Player</a></li>
+                            <li><a class="dropdown-item" href="./tournaments.html">Tournaments</a></li>
+                            <li><a class="dropdown-item" href="./tours.html">Tours</a></li>
+                            <li><a class="dropdown-item" href="./trailors.html">Trailors</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section id="contact" class="contact">
+        <div class="container" style="display: flex; align-items: center; justify-content: center;">
+            
+            
+                <!-- Part 1: Contact Form -->
+                <div class="col-md-6 contact-form" >
+                    <h2 class="section-title a">Contact</h2>
+                    <p>Don’t hesitate to reach out! If you have any questions or would like to book a session, feel free to contact us through the form below or connect with us on Instagram. We're here to help with any inquiries you might have.</p>
+                    <p>Follow us on Instagram: <a href="https://www.instagram.com/notion.22?igsh=MWcxaTkwdm5qMmh0Nw==" target="_blank" class="contact-link">@Notion.22</a></p>
+              
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-light" id="submitBtn">Submit</button>
+                    </form>
+                </div>
+                <!-- Part 2: Call-to-Action Message -->
+                <!-- <div class="col-md-6 contact-info">
+                    <h2 class="section-title">Get in Touch</h2>
+                    <p>Don’t hesitate to reach out! If you have any questions or would like to book a session, feel free to contact us through the form above or connect with us on Instagram. We're here to help with any inquiries you might have.</p>
+                    <p>Follow us on Instagram: <a href="https://www.instagram.com/notion.22?igsh=MWcxaTkwdm5qMmh0Nw==" target="_blank" class="contact-link">@Notion.22</a></p>
+                    <p>Alternatively, you can reach out via email or the contact form on this page. We look forward to hearing from you!</p>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    
+<footer>
+    <p>&copy; 2024 Notion22. All rights reserved.</p>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"> </script>
+        
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init("4LHpA62bjDNfNhxbo"); // Replace with your actual public key
+    })();
+</script>
+<script src="./assets/js/contact.js"></script>
+<script src="./assets/js/protofolio.js"></script>
+</body>
+</html>
