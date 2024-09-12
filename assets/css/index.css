@@ -1,14 +1,14 @@
-
-.a{
-
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.a {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
 body {
     background-color: black;
     color: white;
     font-family: Arial, sans-serif;
     margin: 0; /* Ensure no default margins */
     padding: 0; /* Remove default padding */
+    padding-top: 80px; /* Adjust this value according to the height of your navbar */
 }
 
 /* Navbar styles */
@@ -23,11 +23,11 @@ body {
     padding: 10px 0; /* Padding for vertical space */
     box-sizing: border-box; /* Include padding in the element's total width and height */
 }
+
 .navbar.scrolled {
     background-color: rgba(0, 0, 0, 0.8); /* Background color when scrolled */
     opacity: 0.9; /* Reduced opacity */
 }
-
 
 .navbar-nav .nav-link {
     color: white; /* Ensures link color */
@@ -36,144 +36,111 @@ body {
     border-radius: 4px; /* Rounded corners */
     transition: background-color 0.3s; /* Smooth transition for background color */
 }
+
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:focus {
     background-color: rgba(255, 255, 255, 0.2); /* Background color on hover/focus */
 }
+
 /* Add margin-top to content to account for navbar height */
 .content {
     margin-top: 80px; /* Adjust this value according to the height of your navbar */
 }
 
-/* Add some top padding to ensure content does not overlap with the fixed navbar */
-body {
-    padding-top: 80px; /* Adjust this value according to the height of your navbar */
-}
-
+/* Hero Section */
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 60px;
 }
+
 .hero img {
     max-width: 50%;
     border-radius: 8px;
 }
+
 .hero-text {
     max-width: 50%;
     animation: fadeIn 3s ease-in-out;
 }
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+/* Section Styles */
 section {
     padding: 60px 15px;
     background-color: #1a1a1a;
     border-radius: 8px;
     margin-bottom: 30px;
 }
+
 .section-title {
     text-align: center;
-    margin-bottom: 30px;
-    font-size: 2rem;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
     color: #fff;
 }
+
+/* Services, Portfolio, and Contact Sections */
 .services, .portfolio, .contact {
     background-color: #1a1a1a;
 }
+
 .service-item, .portfolio-item {
     margin-bottom: 20px;
 }
-.portfolio-item {
-opacity: 0;
-transform: translateY(20px);
-transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-}
-
-.portfolio-animate {
-opacity: 1;
-transform: translateY(0);
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.services {
-padding: 60px 15px;
-background-color: #1a1a1a;
-border-radius: 8px;
-}
-
-.section-title {
-text-align: center;
-margin-bottom: 40px;
-font-size: 2.5rem;
-color: #fff;
-}
 
 .service-item {
-background-color: #333;
-border-radius: 8px;
-padding: 20px;
-text-align: center;
-transition: transform 0.3s, box-shadow 0.3s;
-margin-bottom: 20px;
+    background-color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .service-item:hover {
-transform: translateY(-10px);
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .service-icon {
-font-size: 3rem;
-color: #676565;
-margin-bottom: 20px;
+    font-size: 3rem;
+    color: #676565;
+    margin-bottom: 20px;
 }
 
 .service-item h3 {
-font-size: 1.75rem;
-color: #fff;
-margin-bottom: 15px;
+    font-size: 1.75rem;
+    color: #fff;
+    margin-bottom: 15px;
 }
 
 .service-item p {
-color: #ccc;
+    color: #ccc;
 }
 
-.btn-light {
-background-color: #676565;
-border: none;
-color: #fff;
-padding: 10px 20px;
-font-size: 1rem;
-border-radius: 4px;
-transition: background-color 0.3s;
-}
-
-.btn-light:hover {
-background-color: #676565;
-}
-/* Make sure the container and row are using flexbox to center items */
-.container1 {
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-
-.row {
-display: flex;
-justify-content: center;
-flex-wrap: wrap; /* Ensures the items wrap to the next line if necessary */
+/* Portfolio Section */
+.portfolio {
+    padding: 60px 15px;
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 8px;
 }
 
 .portfolio-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
     margin-bottom: 30px;
+}
+
+.portfolio-animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .responsive-iframe {
@@ -183,6 +150,8 @@ flex-wrap: wrap; /* Ensures the items wrap to the next line if necessary */
     overflow: hidden;
     max-width: 100%;
     background: #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow for better visuals */
 }
 
 .responsive-iframe iframe {
@@ -191,143 +160,102 @@ flex-wrap: wrap; /* Ensures the items wrap to the next line if necessary */
     left: 0;
     width: 100%;
     height: 100%;
+    border: none; /* Remove border */
 }
 
 /* Style the video elements */
-.portfolio-item video {
-max-width: 100%; /* Adjusts to the width of its container */
-height: auto; /* Maintains aspect ratio */
-border-radius: 8px; /* Optional: adds rounded corners */
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds shadow for better visuals */
-}
-
+.portfolio-item video,
 .portfolio-item iframe {
     width: 100%; /* Ensure it scales to fit the container */
     height: auto; /* Maintain aspect ratio */
-    border: none; /* Remove border */
     border-radius: 8px; /* Optional: Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow for better visuals */
 }
+
 /* Center the 'See More' button */
 .text-center {
-margin-top: 30px;
-}
-.contact {
-padding: 60px 15px;
-background-color: #1a1a1a;
-color: #fff;
-border-radius: 8px;
-}
-
-.contact .section-title {
-text-align: center;
-margin-bottom: 30px;
-font-size: 2.5rem;
-}
-
-.contact-form, .contact-info {
-background-color: #333;
-border-radius: 8px;
-padding: 20px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.contact-form .form-control {
-border-radius: 4px;
-background-color: #444;
-color: #fff;
-border: 1px solid #666;
-}
-
-.contact-form .form-control:focus {
-border-color: #999;
-background-color: #555;
-}
-
-.contact-info p {
-margin-bottom: 15px;
-font-size: 1rem;
-}
-
-.contact-info a.contact-link {
-color: #00aaff;
-text-decoration: none;
-}
-
-.contact-info a.contact-link:hover {
-text-decoration: underline;
+    margin-top: 30px;
 }
 
 .btn-light {
-background-color: #676565;
-border: none;
-color: #fff;
-padding: 10px 20px;
-font-size: 1rem;
-border-radius: 4px;
-transition: background-color 0.3s;
+    background-color: #676565;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
 .btn-light:hover {
-background-color: #575757;
+    background-color: #575757;
 }
 
-/* Ensure columns stay side by side on medium and larger screens */
-@media (min-width: 768px) {
+/* Contact Section */
+.contact {
+    padding: 60px 15px;
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.contact .section-title {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
 .contact-form, .contact-info {
-display: flex;
-flex-direction: column;
-margin-bottom: 15px; /* Space between columns on medium screens and larger */
+    background-color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.contact-info {
-margin-left: 15px; /* Space between columns on medium screens and larger */
-}
-}
-
-/* Responsive Styles for Smaller Screens */
-@media (max-width: 767px) {
-.contact-form, .contact-info {
-margin-right: 0;
-margin-bottom: 40px; /* Increase space between columns on smaller screens */
+.contact-form .form-control {
+    border-radius: 4px;
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #666;
 }
 
-.contact-form {
-margin-bottom: 40px; /* Adjust spacing for better layout on small screens */
+.contact-form .form-control:focus {
+    border-color: #999;
+    background-color: #555;
 }
 
-.contact-info {
-margin-top: 40px; /* Ensure space above contact-info on small screens */
+.contact-info p {
+    margin-bottom: 15px;
+    font-size: 1rem;
 }
+
+.contact-info a.contact-link {
+    color: #00aaff;
+    text-decoration: none;
 }
+
+.contact-info a.contact-link:hover {
+    text-decoration: underline;
+}
+
+/* About Section */
 .about {
-padding: 60px 15px;
-background-color: #1a1a1a;
-color: #fff;
-border-radius: 8px;
-margin-bottom: 30px;
+    padding: 60px 15px;
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 8px;
+    margin-bottom: 30px;
 }
 
 .about .section-title {
-text-align: center;
-margin-bottom: 40px;
-font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
 }
 
 .about-text {
-font-size: 1rem;
-line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
-.about-image img {
-border-radius: 8px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-
-.navbar-toggler-icon {
-background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="none"%3E%3Cpath stroke="%23ffffff" stroke-width="2" d="M5 7h20M5 15h20M5 23h20" /%3E%3C/svg%3E');
-}
 .about-image {
     display: flex;
     justify-content: center; /* Horizontal alignment */
@@ -339,4 +267,73 @@ background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.
     width: 20rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Navbar Toggler Icon */
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="none"%3E%3Cpath stroke="%23ffffff" stroke-width="2" d="M5 7h20M5 15h20M5 23h20" /%3E%3C/svg%3E');
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 767px) {
+    .portfolio-item {
+        margin-bottom: 20px;
+    }
+
+    .contact-form, .contact-info {
+        margin-right: 0;
+        margin-bottom: 40px; /* Increase space between columns on smaller screens */
+    }
+
+    .contact-info {
+        margin-top: 40px; /* Ensure space above contact-info on small screens */
+    }
+}
+
+/* Ensure columns stay side by side on medium and larger screens */
+@media (min-width: 768px) {
+    .contact-form, .contact-info {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px; /* Space between columns on medium screens and larger */
+    }
+
+    .contact-info {
+        margin-left: 15px; /* Space between columns on medium screens and larger */
+    }
+}
+/* Adjust the video and iframe container */
+.portfolio-item video,
+.portfolio-item iframe {
+    width: 100%; /* Ensure it scales to fit the container */
+    height: 60vh; /* Adjust height to make the video larger */
+    max-width: 100%; /* Ensure it does not exceed the container width */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow for better visuals */
+}
+
+/* Adjust the responsive iframe container if needed */
+.responsive-iframe {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow for better visuals */
+}
+
+.responsive-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove border */
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(231, 219, 219, 0.1);
 }
