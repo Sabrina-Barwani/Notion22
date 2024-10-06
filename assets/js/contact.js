@@ -32,6 +32,13 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('#message').value = '';
             document.querySelector('#phone').value = '';
             alert('Email sent successfully!');
+
+            // Optionally send an auto-reply to the user
+            emailjs.send("service_9t6kf96", "template_q0beqkm", {
+                to_email: email, // Send auto-reply to user's email
+                user_name: name, // You can use this in the auto-reply template
+            });
+
         }, function(error) {
             alert('Failed to send email.');
             console.error('Error:', error);
