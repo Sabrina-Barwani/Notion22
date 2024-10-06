@@ -23,23 +23,54 @@ font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding: 10px 0; /* Padding for vertical space */
     box-sizing: border-box; /* Include padding in the element's total width and height */
 }
-.navbar.scrolled {
-    background-color: rgba(0, 0, 0, 0.8); /* Background color when scrolled */
-    opacity: 0.9; /* Reduced opacity */
+/* Logo styles */
+.logo {
+    height: 50px; /* Adjust height as needed */
+    margin-left: 15px; /* Space to the left */
+    margin-right: 15px; /* Space to the right (if needed) */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767px) {
+    .navbar {
+        display: flex; /* Use flexbox */
+        align-items: center; /* Center items vertically */
+        justify-content: space-between; /* Space between logo and toggler */
+        padding: 5px 10px; /* Reduce padding */
+    }
+
+    .logo {
+        margin-left: 20px; /* Space on the left side */
+        margin-right: 10px; /* Space on the right side */
+        max-width: 60rem; /* Limit logo width */
+        height: 40px; /* Set a fixed height */
+        object-fit: contain; /* Ensure the image scales correctly */
+    }
+
+    .navbar-toggler {
+        margin-left: auto; /* Push the hamburger to the right */
+        padding: 8px; /* Adjust padding if necessary */
+        height: 40px; /* Set height to match the logo */
+        display: flex; /* Ensure it behaves like a flex item */
+        align-items: center; /* Center vertically */
+    }
+
+    .collapse {
+        width: 100%; /* Ensure the collapse expands to full width */
+    }
+
+    .navbar-nav {
+        display: flex; /* Use flexbox for nav items */
+        align-items: center; /* Center items vertically */
+    }
+
+    .navbar-nav .nav-link {
+        padding: 8px; /* Adjust padding */
+        margin: 0 5px; /* Space between links */
+    }
 }
 
 
-.navbar-nav .nav-link {
-    color: white; /* Ensures link color */
-    background-color: rgba(0, 0, 0, 0.8); /* Consistent background for links */
-    padding: 10px; /* Padding around links */
-    border-radius: 4px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth transition for background color */
-}
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link:focus {
-    background-color: rgba(255, 255, 255, 0.2); /* Background color on hover/focus */
-}
 /* Add margin-top to content to account for navbar height */
 .content {
     margin-top: 80px; /* Adjust this value according to the height of your navbar */
@@ -49,6 +80,65 @@ font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 body {
     padding-top: 80px; /* Adjust this value according to the height of your navbar */
 }
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767px) {
+    .navbar {
+        display: flex; /* Use flexbox */
+        align-items: center; /* Center items vertically */
+        justify-content: space-between; /* Space between logo and toggler */
+        padding: 5px 10px; /* Reduce padding */
+    }
+
+    .logo {
+        margin-left: 20px; /* Space on the left side */
+        margin-right: 10px; /* Space on the right side */
+        max-width: 60rem; /* Limit logo width */
+        height: 40px; /* Set a fixed height */
+        object-fit: contain; /* Ensure the image scales correctly */
+    }
+
+    .navbar-toggler {
+        margin-left: auto; /* Push the hamburger to the right */
+        padding: 8px; /* Adjust padding if necessary */
+        height: 40px; /* Set height to match the logo */
+        display: flex; /* Ensure it behaves like a flex item */
+        align-items: center; /* Center vertically */
+    }
+
+    .collapse {
+        width: 100%; /* Ensure the collapse expands to full width */
+    }
+
+    .navbar-nav {
+        display: flex; /* Use flexbox for nav items */
+        align-items: center; /* Center items vertically */
+    }
+
+    .navbar-nav .nav-link {
+        padding: 8px; /* Adjust padding */
+        margin: 0 5px; /* Space between links */
+    }
+}
+
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* Background color when scrolled */
+    opacity: 0.9; /* Reduced opacity */
+}
+
+.navbar-nav .nav-link {
+    color: white; /* Ensures link color */
+    background-color: rgba(0, 0, 0, 0.8); /* Consistent background for links */
+    padding: 10px; /* Padding around links */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    background-color: rgba(255, 255, 255, 0.2); /* Background color on hover/focus */
+}
+
 
 /* Footer styles */
 footer {
