@@ -1,3 +1,8 @@
+function isValidEmail(email) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('submitBtn').addEventListener('click', function(event) {
         event.preventDefault(); // Prevent the form from submitting the default way
@@ -7,6 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
         var email = document.querySelector('#email').value;
         var message = document.querySelector('#message').value;
         var phone = document.querySelector('#phone').value;
+
+         // Validate email
+         if (!isValidEmail(email)) {
+            alert('Please enter a valid email address.');
+            return; // Stop further execution if the email is invalid
+        }
 
         // Send email
         emailjs.send("service_9t6kf96", "template_60nrdhu", {
