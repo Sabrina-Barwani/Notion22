@@ -6,17 +6,20 @@ document.addEventListener('DOMContentLoaded', function() {
         var name = document.querySelector('#name').value;
         var email = document.querySelector('#email').value;
         var message = document.querySelector('#message').value;
+        var phone = document.querySelector('#phone').value;
 
         // Send email
         emailjs.send("service_9t6kf96", "template_60nrdhu", {
             from_name: name,
             from_email: email,
+            phone:phone,
             message: message
         }).then(function(response) {
             // Clear the form fields
             document.querySelector('#name').value = '';
             document.querySelector('#email').value = '';
             document.querySelector('#message').value = '';
+            document.querySelector('#phone').value = '';
             alert('Email sent successfully!');
         }, function(error) {
             alert('Failed to send email.');
