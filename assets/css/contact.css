@@ -274,14 +274,32 @@ color: #fff;
     }
 }
         
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.1);
-        }
+footer {
+    background-color: #1a1a1a; /* Dark background */
+    color: #f0f0f0; /* Light text color */
+    text-align: center; /* Centered text */
+    padding: 30px 20px; /* More padding for better spacing */
+    position: relative; /* Positioning */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
 
+footer p {
+    margin: 5px 0; /* Reduced margin for paragraphs */
+}
 
-       
+.developer-name {
+    font-style: italic; /* Italic style for developer name */
+    font-size: 0.9rem; /* Slightly smaller font size */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    footer {
+        padding: 20px 10px; /* Adjust padding on small screens */
+    }
+}
 
 
 
