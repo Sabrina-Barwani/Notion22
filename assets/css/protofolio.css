@@ -41,7 +41,45 @@ body {
 .navbar-nav .nav-link:focus {
     background-color: rgba(255, 255, 255, 0.2);
 }
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767px) {
+    .navbar {
+        display: flex; /* Use flexbox */
+        align-items: center; /* Center items vertically */
+        justify-content: space-between; /* Space between logo and toggler */
+        padding: 5px 10px; /* Reduce padding */
+    }
 
+    .logo {
+        margin-left: 20px; /* Space on the left side */
+        margin-right: 10px; /* Space on the right side */
+        max-width: 60rem; /* Limit logo width */
+        height: 40px; /* Set a fixed height */
+        object-fit: contain; /* Ensure the image scales correctly */
+    }
+
+    .navbar-toggler {
+        margin-left: auto; /* Push the hamburger to the right */
+        padding: 8px; /* Adjust padding if necessary */
+        height: 40px; /* Set height to match the logo */
+        display: flex; /* Ensure it behaves like a flex item */
+        align-items: center; /* Center vertically */
+    }
+
+    .collapse {
+        width: 100%; /* Ensure the collapse expands to full width */
+    }
+
+    .navbar-nav {
+        display: flex; /* Use flexbox for nav items */
+        align-items: center; /* Center items vertically */
+    }
+
+    .navbar-nav .nav-link {
+        padding: 8px; /* Adjust padding */
+        margin: 0 5px; /* Space between links */
+    }
+}
 /* Content Margin */
 .content {
     margin-top: 80px;
