@@ -1,92 +1,138 @@
-       body {
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
-    margin: 0; /* Ensure no default margins */
-    padding: 0; /* Remove default padding */
-}
 
+.a{
+
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0; /* Ensure no default margins */
+        padding: 0; /* Remove default padding */
+    }
 /* Navbar styles */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.8); /* Initial background color */
+    background-color: rgba(0, 0, 0, 0.8);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     transition: background-color 0.3s ease, opacity 0.3s ease;
-    z-index: 1000; /* Ensure the navbar is above other content */
-    position: fixed; /* Keep the navbar fixed at the top */
-    top: 0; /* Ensure it stays at the top */
-    width: 100%; /* Full width */
-    padding: 10px 0; /* Padding for vertical space */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    box-sizing: border-box;
 }
 .navbar.scrolled {
-    background-color: rgba(0, 0, 0, 0.8); /* Background color when scrolled */
-    opacity: 0.9; /* Reduced opacity */
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0.9;
 }
 
-
+/* Navbar Links */
 .navbar-nav .nav-link {
-    color: white; /* Ensures link color */
-    background-color: rgba(0, 0, 0, 0.8); /* Consistent background for links */
-    padding: 10px; /* Padding around links */
-    border-radius: 4px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth transition for background color */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:focus {
-    background-color: rgba(255, 255, 255, 0.2); /* Background color on hover/focus */
-}
-/* Add margin-top to content to account for navbar height */
-.content {
-    margin-top: 80px; /* Adjust this value according to the height of your navbar */
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Content Margin */
+.content {
+    margin-top: 80px;
+}
 /* Add some top padding to ensure content does not overlap with the fixed navbar */
 body {
     padding-top: 80px; /* Adjust this value according to the height of your navbar */
 }
 
-        .portfolio-section {
-            padding: 60px 15px;
-            background-color: #1a1a1a;
-            margin-bottom: 30px;
-            border-radius: 8px;
-        }
-        .section-title {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2.5rem;
-        }
-        .video-item {
-            margin-bottom: 20px;
-        }
-        .video-item video {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .view-more {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .btn-light {
-            background-color: #676565;
-            border: none;
-            color: #fff;
-            padding: 10px 20px;
-            font-size: 1rem;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-        .btn-light:hover {
-            background-color: #575757;
-        }
-        .a{
-
-font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+/* Portfolio Section */
+.portfolio-section {
+    padding: 60px 15px;
+    background-color: #1a1a1a;
+    margin-bottom: 30px;
+    border-radius: 8px;
 }
- 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.1);
-        } 
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+/* Video Item Styles */
+.video-item {
+    margin-bottom: 20px;
+}
+
+/* Ensuring Video Full Width */
+.video-item video {
+    width: 100%; /* Full width of the parent container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Video Container */
+.responsive-iframe {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    width: 100%; /* Full width of the parent container */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.responsive-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the parent container */
+    height: 100%; /* Full height of the parent container */
+    border: none;
+}
+
+/* View More Button */
+.view-more {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-light {
+    background-color: #676565;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.btn-light:hover {
+    background-color: #575757;
+}
+
+/* Font Styles */
+.a {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 767px) {
+    .video-item {
+        flex: 1 1 100%; /* Full width columns on smaller screens */
+        max-width: 100%;
+    }
+}

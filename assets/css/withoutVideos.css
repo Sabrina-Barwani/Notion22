@@ -108,3 +108,6 @@ body {
 .btn-light:hover {
     background-color: #575757;
 }
+.text-center {
+    margin-top: 30px; /* Add top margin if needed for additional spacing */
+}

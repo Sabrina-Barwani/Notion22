@@ -50,25 +50,37 @@ body {
     padding-top: 80px; /* Adjust this value according to the height of your navbar */
 }
 
- .portfolio-section {
-            padding: 60px 15px;
-            background-color: #1a1a1a;
-            margin-bottom: 30px;
-            border-radius: 8px;
-        }
-.section-title {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2.5rem;
-        }
- .video-item {
-            margin-bottom: 20px;
-        }
-.video-item video {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+ 
+/* Adjust the video and iframe container */
+.portfolio-item video,
+.portfolio-item iframe {
+    width: 100%; /* Ensure it scales to fit the container */
+    height: 60vh; /* Adjust height to make the video larger */
+    max-width: 100%; /* Ensure it does not exceed the container width */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow for better visuals */
+}
+
+/* Adjust the responsive iframe container if needed */
+.responsive-iframe {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow for better visuals */
+}
+
+.responsive-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove border */
+}
 .view-more {
             text-align: center;
             margin-top: 30px;
@@ -214,4 +226,6 @@ body {
                   
               
             
-    
+            .text-center {
+                margin-top: 30px; /* Add top margin if needed for additional spacing */
+            }
