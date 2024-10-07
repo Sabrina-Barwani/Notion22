@@ -43,7 +43,7 @@
 </nav>
 <section class="hero">
     <div class="hero-background">
-        <video id="background-video" autoplay >
+        <video id="background-video" autoplay  preload="auto">
             <source src="./assets/Untitled video - Made with Clipchamp.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -53,7 +53,7 @@
     <div class="hero-content">
         <h1 class="hero-title a">Explore the Art of Videography</h1>
         <p class="hero-description">Welcome to Videography World, where we celebrate the art and passion of capturing moments.</p>
-        <a href="./protofolio.html" class="cta-button">View My Work</a>
+        <a href="./protofolio.html" class="cta-button">View Our Work</a>
     </div>
 </section>
 
@@ -159,15 +159,19 @@
 <script src="./assets/js/index.js"></script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const video = document.getElementById('background-video');
-        const image = document.getElementById('background-image');
+  document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('background-video');
+    const image = document.getElementById('background-image');
 
-        video.addEventListener('ended', function() {
-            video.style.display = 'none'; // Hide the video
-            image.style.display = 'block'; // Show the image
-        });
+    // Play the video immediately
+    video.play();
+
+    // When the video ends, show the image and hide the video
+    video.addEventListener('ended', function() {
+        video.style.display = 'none'; // Hide the video
+        image.style.display = 'block'; // Show the image when the video ends
     });
+});
 </script>
 
 </body>
