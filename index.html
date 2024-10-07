@@ -43,10 +43,7 @@
 </nav>
 <section class="hero">
     <div class="hero-background">
-        <video id="background-video" autoplay  preload="auto">
-            <source src="./assets/Untitled video - Made with Clipchamp.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <img id="background-gif" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWpjbjZtMXkxdWNrbzBpeGQ1MWRhdTVrcnhueXJ6Mmp5empxbHpnZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sXU8fz6Uw8BTiuzQTz/giphy.gif" alt="Background GIF" style="width: 100%; height: auto; object-fit: cover;">
         <img id="background-image" src="./assets/imgs/background.jpg" alt="Background" style="display: none;">
     </div>
     <div class="hero-overlay"></div>
@@ -159,20 +156,21 @@
 <script src="./assets/js/index.js"></script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const video = document.getElementById('background-video');
-    const image = document.getElementById('background-image');
-
-    // Play the video immediately
-    video.play();
-
-    // When the video ends, show the image and hide the video
-    video.addEventListener('ended', function() {
-        video.style.display = 'none'; // Hide the video
-        image.style.display = 'block'; // Show the image when the video ends
+    document.addEventListener('DOMContentLoaded', function() {
+        const gif = document.getElementById('background-gif');
+        const image = document.getElementById('background-image');
+    
+        // Once the GIF is fully loaded, you can choose to show/hide
+        gif.onload = function() {
+            // Optional: You can add any logic here if needed
+        };
+    
+        // To hide the GIF and show the image after some time, you can use a timer
+        setTimeout(function() {
+            gif.style.display = 'none'; // Hide the GIF
+            image.style.display = 'block'; // Show the image
+        }, 5000); // Change 5000 to the duration you want the GIF to display (in milliseconds)
     });
-});
-</script>
-
+    </script>
 </body>
 </html>
